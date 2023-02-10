@@ -1,5 +1,6 @@
 import { useState } from "react";
- import styles from '../../styles/MainContainer.module.scss'
+import styles from "../../styles/MainContainer.module.scss";
+import CheshireCat from "../CheshireCat";
 
 function MainContainer() {
   const [fact, setFact] = useState<string | undefined>();
@@ -13,8 +14,22 @@ function MainContainer() {
 
   return (
     <div className={styles.mainContainer}>
-      <button onClick={getNewCatFact}>New Cat Fact</button>
-      <h1 className={styles.primaryColor}>{fact}</h1>
+      <div className={styles.bubbleContainer}>
+        <div className={styles.bubble}>
+          <div className={styles.catFact}>
+            <p>{fact}</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <CheshireCat />
+        <div className={styles.catButton}>
+          <button className={styles.button} onClick={getNewCatFact}>
+            New Cat Fact
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
