@@ -1,5 +1,5 @@
 /* MainContainer.module.scss */
-
+@import "./utilities.scss";
 @font-face {
   font-family: "Alice";
   src: url("../assets/alice-in-wonderland/alice.ttf");
@@ -8,142 +8,167 @@
   font-display: fallback;
 }
 
+
 .mainContainer {
   display: flex;
   flex-direction: column;
-/*   background-color: rgb(16, 16, 54); */
   width: 100%;
   height: 100%;
   justify-content: center;
 
- 
+}
 
+.bubbleContainer {
+  height: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
 
-  .mainContainerBottom {
+.bubble {
+  align-self: flex-end;
+  justify-self: flex-end;
+  position: relative;
+  width: 55%;
+  max-height: 100%;
+  padding: 6px;
+  background: $white;
+  border-radius: 80px;
+  border: solid 2px;
+  margin-right: 8%;
+  margin-bottom: 2%;
+
+  .catFact {
     display: flex;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    max-height: 30%;
 
-    .catButton {
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    p {
+      width: 80%;
+      height: 100%;
 
-      /* CSS */
-      .button {
-        background-color: #cc79c8;
-        border: 0 solid #e5e7eb;
-        box-sizing: border-box;
-        color: #e5e7eb;
-        display: flex;
-        font-family: Alice;
-        font-size: 1.5rem;
-        font-weight: 700;
-        justify-content: center;
-        padding: 2%;
-        position: relative;
-        text-align: center;
-        text-decoration: none #e5e7eb solid;
-        text-decoration-thickness: auto;
-        width: 50%;
-        max-width: 460px;
-        position: relative;
-        cursor: pointer;
-        transform: rotate(-2deg);
-        user-select: none;
-        touch-action: manipulation;
-      }
-
-      .button:focus {
-        outline: 0;
-      }
-
-      .button:after {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        border: 1px solid #e5e7eb;
-        bottom: 4px;
-        left: 4px;
-        width: calc(100% - 1px);
-        height: calc(100% - 1px);
-      }
-
-      .button:hover:after {
-        bottom: 2px;
-        left: 2px;
-      }
+      text-align: center;
+      color: $black;
+      font-family: Alice;
+      font-size: calc(0.4rem + 1.3vw);
+      padding: 3px;
     }
-  }
-
-  .bubbleContainer {
-    height: 50%;
-    display: flex;
-    justify-content: flex-end;
-
-  }
-
-  .bubble {
-    align-self: flex-end;
-    justify-self: flex-end;
-    position: relative;
-    width: 55%;
-    max-height: 100%;
-    padding: 6px;
-    background: #ffffff;
-    border-radius: 80px;
-    border: solid 2px;
-    margin-right: 8%;
-    margin-bottom: 2%;
-
- 
-
-    .catFact {
-      display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-      max-height: 30%;
-
-      p {
-        width: 80%;
-        height: 100%;
-     
-        text-align: center;
-        color: black;
-        font-family: Alice;
-        font-size: calc(0.5rem + 1.8vmin);
-        padding: 3px;
-      }
-    }
-  }
-
-  .bubble:after {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-width: 24px 10px 0;
-    border-color: #ffffff transparent;
-    display: block;
-    width: 0;
-    z-index: 1;
-    margin-left: -5%;
-    transform: rotate(10deg);
-    bottom: -29x;
-    left: 29%;
-  }
-
-  .bubble:before {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-width: 25px 21px 0;
-    border-color: transparent;
-    display: block;
-    width: 0;
-    z-index: 0;
-    margin-left: -21px;
-    bottom: -27px;
-    left: 29%;
   }
 }
+
+.bubble:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 24px 10px 0;
+  border-color: $white transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-left: -5%;
+  transform: rotate(10deg);
+  bottom: -29x;
+  left: 29%;
+}
+
+
+
+.mainContainerBottom {
+  display: flex;
+  width: 100%;
+}
+
+.catButton {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CSS */
+.button {
+  background-color: $catStripeColor;
+  border: 0 solid $offWhite;
+  box-sizing: border-box;
+  color: $offWhite;
+  display: flex;
+  font-family: Alice;
+  font-size: calc(0.5rem + 2vw);
+  font-weight: 700;
+  justify-content: center;
+  padding: 2%;
+  position: relative;
+  text-align: center;
+  text-decoration: none $offWhite solid;
+  width: 50%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  border: 1px solid $offWhite;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (max-width: 700px) {
+
+  .catButton{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mainContainerBottom{
+    flex-direction: column;
+    height: 40%;
+    gap: 10%;
+  }
+
+  .button{
+    display: flex;
+    align-items: center;
+    height: 60%;
+    width: 70%;
+  }
+
+  .bubble{
+    margin-bottom: 5%;
+    width: 70%;
+    right: 20%;
+  }
+
+  .bubble:after{
+    transform: rotate(-10deg);
+    margin-left: 40%;
+  }
+
+  .bubble>.catFact>p{
+    font-size: 1rem; 
+  } 
+  
+ 
+  
+}
+

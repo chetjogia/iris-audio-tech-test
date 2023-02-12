@@ -1,16 +1,16 @@
-@import './utilities.scss';
+@import "./utilities.scss";
 
-
-.main{
+.main {
   height: 92vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
-
-
+  background: linear-gradient(
+    to bottom,
+    $backgroundColorDarkStart 0%,
+    $backgroundColorDarkEnd 100%
+  );
 }
-
 
 .moon {
   position: absolute;

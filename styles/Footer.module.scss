@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import './utilities.scss';
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-top: solid #cc79c8;;
+  border-top: solid $catStripeColor;
   position: fixed;
   height: 8vh;
   width: 100%;
   bottom: 0;
   padding: 10px;
-  background-color:  #100751;
+  background-color: $backgroundColorDarkEnd;
   
   .footerIcon, .footerName {
     font-family: "Lato", sans-serif;
@@ -18,7 +19,7 @@
     font-size: 0.7rem;
     width: 100%;
     text-decoration: none;
-    color:  #e5e7eb;
+    color:  $offWhite;
   }
 
   .footerName{

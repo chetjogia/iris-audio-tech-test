@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className={styles.footer}>
+    <div className={`${styles.footer} `}>
       <div>
         <Link
           className={styles.footerName}
