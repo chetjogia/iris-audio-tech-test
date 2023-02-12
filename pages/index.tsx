@@ -4,7 +4,6 @@ import { Inter } from '@next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 import MainContainer from '@/components/MainContainer'
 import Footer from '@/components/Footer'
-import CheshireCat from '@/components/CheshireCat'
 import style from '../styles/Home.module.scss'
 
 
@@ -18,8 +17,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={style.main}>
- 
+        <div className={style.moon}></div>
+        <div className={style.stars}></div>
         <MainContainer/>
+        <Footer/>
 
         
       </main>

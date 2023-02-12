@@ -22,7 +22,7 @@ function MainContainer() {
         </div>
       </div>
 
-      <div>
+      <div className={styles.mainContainerBottom}>
         <CheshireCat />
         <div className={styles.catButton}>
           <button className={styles.button} onClick={getNewCatFact}>

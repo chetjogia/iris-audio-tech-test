@@ -1,9 +1,43 @@
+@import './utilities.scss';
+
+
 .main{
   height: 92vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, #201c2f 0%, #100751 100%);
+
+
 }
 
-.description{
-  background-color: red;
+
+.moon {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  box-shadow: 1rem 1rem 0 0 $catEyeColor;
+}
+
+$displayWidth: 2560;
+$displayHeight: 2560;
+$starSize: 1px;
+
+@function generate-stars($n) {
+  $stars: "#{random($displayWidth)}px #{random($displayHeight)}px #FFF";
+  @for $i from 2 through $n {
+    $stars: "#{$stars} , #{random($displayWidth)}px #{random($displayHeight)}px #FFF";
+  }
+  @return unquote($stars);
+}
+
+.stars {
+  width: $starSize;
+  height: $starSize;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: generate-stars(1000);
 }

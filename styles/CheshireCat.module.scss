@@ -1,5 +1,9 @@
+@import './utilities.scss';
+
 .cheshire{
     display:flex;
+    width: 50%;
+    padding-left: 3%;
 
 }
   
@@ -12,13 +16,37 @@
   .cat {
     width: 100%;
   }
+
+  .tail, .body, .body-back{
+    fill: $catStripeColor;
+  }
+  
+  .head-transparent{
+    fill: $catSecondColor;
+  }
+
+  .mouth{
+    fill: $catMouthColor;
+  }
+
+  .topEar{
+    fill: $catTopEar;
+  }
+
+  .bottomEar{
+    fill: $catBottomEar;
+  }
+  
+  .earShadow{
+    fill: #690b4a;
+  }
   
   .tail,
   .body,
   .paws,
   .head-transparent {
     animation-name: cat-opacity;
-    animation-duration: 6s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
@@ -63,9 +91,32 @@
       transform: translateX(0px);
     }
   }
-  
+  .nose{
+    fill: $catNose; 
+
+    .catNostrils{
+      fill: $catNostrils;
+    }
+  }
+
+  .moustache{
+    fill: $catMoustache;
+  }
+  .catWrinkles{
+    fill: $catWrinkles;
+  }
+
+  .eyes{
+    fill: $catEyeColor;
+  }
+
+  .secondEyeColor{
+    fill: $catEyeSecondColor;
+  }
+
   .r-eye,
   .l-eye  {
+    fill: $catPupil;
     animation-duration: 10s;
     animation-delay: 7s;
     animation-iteration-count: infinite;
@@ -75,7 +126,19 @@
   .r-eye {
     animation-name: move-eye-left;
   }
+
+  .tooth{
+    fill: $white;
+    stroke: $black;
+  }
+
+  .paws{
+    fill: $catPaws;
+  }
+ 
   
+ 
+
   @keyframes move-eye-left {
     0% {
       transform: translate(0px);

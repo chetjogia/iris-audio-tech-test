@@ -1,5 +1,5 @@
 /* MainContainer.module.scss */
-$primary-color: #64ff00;
+
 @font-face {
   font-family: "Alice";
   src: url("../assets/alice-in-wonderland/alice.ttf");
@@ -10,22 +10,21 @@ $primary-color: #64ff00;
 
 .mainContainer {
   display: flex;
-
   flex-direction: column;
-  background-color: rgb(16, 16, 54);
-
+/*   background-color: rgb(16, 16, 54); */
   width: 100%;
   height: 100%;
+  justify-content: center;
+
+ 
 
 
-
-  div {
-
+  .mainContainerBottom {
     display: flex;
     width: 100%;
 
     .catButton {
-      height: 100%;
+      width: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -41,8 +40,7 @@ $primary-color: #64ff00;
         font-size: 1.5rem;
         font-weight: 700;
         justify-content: center;
-        line-height: 1.75rem;
-        padding: 0.75rem 1.65rem;
+        padding: 2%;
         position: relative;
         text-align: center;
         text-decoration: none #e5e7eb solid;
@@ -53,7 +51,6 @@ $primary-color: #64ff00;
         cursor: pointer;
         transform: rotate(-2deg);
         user-select: none;
-        -webkit-user-select: none;
         touch-action: manipulation;
       }
 
@@ -79,10 +76,11 @@ $primary-color: #64ff00;
     }
   }
 
-  .bubbleContainer{
-    height: 40%;
+  .bubbleContainer {
+    height: 50%;
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+
   }
 
   .bubble {
@@ -93,26 +91,28 @@ $primary-color: #64ff00;
     max-height: 100%;
     padding: 6px;
     background: #ffffff;
-    -webkit-border-radius: 80px;
-    -moz-border-radius: 80px;
     border-radius: 80px;
     border: solid 2px;
     margin-right: 8%;
+    margin-bottom: 2%;
+
+ 
 
     .catFact {
       display: flex;
       width: 100%;
-      height: 100%;
       align-items: center;
       justify-content: center;
-   
+      max-height: 30%;
+
       p {
         width: 80%;
         height: 100%;
+     
         text-align: center;
-        color:black;
+        color: black;
         font-family: Alice;
-        font-size: 1.3rem;
+        font-size: calc(0.5rem + 1.8vmin);
         padding: 3px;
       }
     }
@@ -127,9 +127,9 @@ $primary-color: #64ff00;
     display: block;
     width: 0;
     z-index: 1;
-    margin-left: -70px;
+    margin-left: -5%;
     transform: rotate(10deg);
-    bottom: -20px;
+    bottom: -29x;
     left: 29%;
   }
 

@@ -1,11 +1,34 @@
-.footer{
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: solid #cc79c8;;
+  position: fixed;
+  height: 8vh;
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+  background-color:  #100751;
+  
+  .footerIcon, .footerName {
+    font-family: "Lato", sans-serif;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border:solid;
-    position: fixed;
-    height: 8vh;
+    font-size: 0.7rem;
     width: 100%;
-    
-    bottom: 0;
+    text-decoration: none;
+    color:  #e5e7eb;
+  }
+
+  .footerName{
+    font-size: 0.6rem;
+  }
+
+
+  .icons {
+    display: flex;
+    gap: 1rem;
+
+  }
 }
