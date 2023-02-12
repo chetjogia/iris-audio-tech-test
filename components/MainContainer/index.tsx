@@ -8,6 +8,7 @@ function MainContainer() {
     "Click the button to learn about Cats"
   );
 
+  //fetch calling from api
   async function getNewCatFact() {
     const response = await fetch("https://catfact.ninja/fact");
     const data = await response.json();
