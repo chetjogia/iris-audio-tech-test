@@ -88,10 +88,10 @@
 
 /* CSS */
 .button {
-  background-color: $buttonColor;
+  background-color: $catStripeColor;
   border: 0 solid $offWhite;
   box-sizing: border-box;
-  color: $offWhite;
+  color: $white;
   display: flex;
   font-family: Alice;
   font-size: calc(0.5rem + 2vw);
