@@ -10,8 +10,8 @@ export default function Home() {
       <Head>
         <title>IRIS Cat Facts</title>
         <meta
-          name="Have fun playing with the cheshire cat and get Cat Facts"
-          content="By Chetan Jogia"
+          name="Description"
+          content="Have fun playing with the cheshire cat and get Cat Facts By Chetan Jogia"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
