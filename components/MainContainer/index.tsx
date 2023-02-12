@@ -1,10 +1,12 @@
 import { useState } from "react";
 import styles from "../../styles/MainContainer.module.scss";
-import CheshireCat from '@/components/CheshireCat';
+import CheshireCat from "@/components/CheshireCat";
 import Button from "../Button";
 
 function MainContainer() {
-  const [fact, setFact] = useState<string | undefined>("Click the button to learn about Cats");
+  const [fact, setFact] = useState<string | undefined>(
+    "Click the button to learn about Cats"
+  );
 
   async function getNewCatFact() {
     const response = await fetch("https://catfact.ninja/fact");
@@ -25,7 +27,7 @@ function MainContainer() {
 
       <div className={styles.mainContainerBottom}>
         <CheshireCat />
-        <Button getNewCatFact={getNewCatFact}/>
+        <Button getNewCatFact={getNewCatFact} />
       </div>
     </div>
   );
