@@ -1,7 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
-const inter = Inter({ subsets: ["latin"] });
 import MainContainer from "@/components/MainContainer";
 import Footer from "@/components/Footer";
 import style from "../styles/Home.module.scss";
@@ -12,11 +10,11 @@ export default function Home() {
       <Head>
         <title>IRIS Cat Facts</title>
         <meta
-          name="Have fun playing with the cheshire cat and learning about cats"
+          name="Have fun playing with the cheshire cat and get Cat Facts"
           content="By Chetan Jogia"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <main className={`${style.main} `}>
         <div className={style.moon}></div>

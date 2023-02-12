@@ -1,14 +1,13 @@
 import * as React from "react";
 import styles from "../../styles/CheshireCat.module.scss";
 
-function CheshireCat(props) {
+function CheshireCat() {
   return (
     <div className={styles["cheshire"]}>
       <svg
         className={styles["cat"]}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 781.54 376.37"
-        {...props}
       >
         <g className={styles["tail"]}>
           <path
