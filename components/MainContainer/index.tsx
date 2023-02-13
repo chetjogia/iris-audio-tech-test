@@ -12,7 +12,7 @@ function MainContainer() {
   async function getNewCatFact() {
     const response = await fetch("https://catfact.ninja/fact");
     const data = await response.json();
-    let catFact: string = data.fact;
+    const catFact: string = data.fact;
     setFact(catFact);
   }
 
