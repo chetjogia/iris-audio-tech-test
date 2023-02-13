@@ -21,17 +21,17 @@ function Footer() {
           href="https://github.com/chetjogia"
           target="_blank"
         >
-          <FaGithub aria-label="github"/>
+          <FaGithub aria-label="github" />
         </Link>
         <Link
           className={styles.footerIcon}
           href="https://linkedin.com/in/chetanjogia"
           target="_blank"
         >
-          <FaLinkedin aria-label="linkedin"/>
+          <FaLinkedin aria-label="linkedin" />
         </Link>
         <Link className={styles.footerIcon} href="mailto: chetjogia@gmail.com">
-          <FiMail aria-label="mail"/>
+          <FiMail aria-label="mail" />
         </Link>
       </div>
     </div>

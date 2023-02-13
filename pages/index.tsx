@@ -1,8 +1,7 @@
-import Head from "next/head";
-import Image from "next/image";
-import MainContainer from "@/components/MainContainer";
-import Footer from "@/components/Footer";
-import style from "../styles/Home.module.scss";
+import Head from 'next/head'
+import MainContainer from '@/components/MainContainer'
+import Footer from '@/components/Footer'
+import style from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
@@ -23,5 +22,5 @@ export default function Home() {
         <Footer />
       </main>
     </>
-  );
+  )
 }
