@@ -8,10 +8,15 @@ function MainContainer() {
     "Click the button to learn about Cats"
   );
 
+  type CatObject = {
+    fact: string
+    length: number
+  }
+
   //fetch calling from api
-  async function getNewCatFact() {
-    const response = await fetch("https://catfact.ninja/fact");
-    const data = await response.json();
+  async function getNewCatFact():Promise<void> {
+    const response: Response = await fetch("https://catfact.ninja/fact");
+    const data: CatObject = await response.json();
     const catFact: string = data.fact;
     setFact(catFact);
   }

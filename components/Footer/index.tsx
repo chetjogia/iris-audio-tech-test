@@ -1,8 +1,8 @@
-import styles from "../../styles/Footer.module.scss";
-import Link from "next/link";
-import { FaGithub } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
-import { FaLinkedin } from "react-icons/fa";
+import styles from '../../styles/Footer.module.scss'
+import Link from 'next/link'
+import { FaGithub } from 'react-icons/fa'
+import { FiMail } from 'react-icons/fi'
+import { FaLinkedin } from 'react-icons/fa'
 
 function Footer() {
   return (
@@ -35,7 +35,7 @@ function Footer() {
         </Link>
       </div>
     </div>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
